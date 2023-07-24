@@ -26,6 +26,8 @@ void main() {
   muur.makeNoise();
   Horse mori = Horse(name: "Mori");
   mori.makeNoise();
+  Camel temee = Camel(name: 'Temee');
+  temee.makeNoise();
 }
 
 class Animal{
@@ -53,4 +55,9 @@ class Cat extends Animal{
 
 class Horse extends Animal{
   Horse ({required super.name});
+}
+
+
+class Camel extends Animal{
+  Camel ({ required super.name});
 }

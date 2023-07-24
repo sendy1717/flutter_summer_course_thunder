@@ -1,29 +1,28 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  final MaterialApp app = MaterialApp(
-    theme:ThemeData(fontFamily: "Ribeye"),
-    home: Scaffold(
-      appBar: AppBar(
-        title: Center(
-          child:Text('Hello Thunder App'),
+  runApp(MySuperApp());
+}
+
+class MySuperApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(fontFamily: "Ribeye"),
+      home: Scaffold(
+        appBar: AppBar(
+          title:Text('Tolgoi Text'),
+        ),
+        body: Container(
+          child: Center(
+            child: Image.asset('assets/images/bvb.png'),
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: Image.asset('assets/images/login.png'),
         ),
       ),
-      body: Container(
-        child: Center(
-          child: Text("Welcome App",
-          style: TextStyle(
-              fontSize: 58,
-            fontFamily: "Nunito",
-            color: Colors.amber
-          ),),
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add_a_photo_outlined),
-      ),
-    ),
-  );
-  runApp(app);
+    );
+  }
 }
